@@ -2,9 +2,8 @@ body {
     background-color: #fff;
 }
 a {
-    color: red;
+    color: #ff0000;
 }
-
 a:hover {
-    color: green;
+    color: #007600;
 }
