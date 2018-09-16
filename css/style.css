@@ -63,18 +63,7 @@ body {
 	font-size: 1em; /* используем безопасные шрифтовые CSS стеки */
 	min-height:100%;
 }
-a, a:visited { /* порядок правил для ссылок имеет значение */
-	color: #e6618c;
-	text-decoration: underline;
-}
-a:hover {
-	color: #fdf208;
-	text-decoration:none;
-}
-a:focus, a:active {
-	color: #c83867;
-	text-decoration: underline;
-}
+
 h1, h2, h3, h4, h5, h6{
 	font-weight:normal;
 }
@@ -93,10 +82,26 @@ img{
 /* --------------- /базовые настройки ---------*/
 .container {
     background-color: #fff;
+    height: 100vh;
+    width: 100%;
 }
-a {
-    color: #ff0000;
+header {
+    background-color: sandybrown;
 }
-a:hover {
+nav ul {
+    height: 100px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+nav ul li a {
+    display: block;
+    color: #000;
+    text-decoration: none;
+    font-weight: bold;
+    padding: 20px;
+    border: 1px solid;
+}
+nav ul li a:hover {
     color: #007600;
 }
