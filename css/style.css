@@ -77,16 +77,14 @@ img{
     max-width: 1200px;
     margin: 0 auto;
 }
-.links_active {
-    color: gold;
-}
 .container {
     background-color: #fff;
     height: 100vh;
     width: 100%;
+    font-family: sans-serif;
 }
 header {
-    background-color: #6e3437;
+    background-color: #6b2e2e;
 }
 nav ul {
     height: 100px;
@@ -94,7 +92,7 @@ nav ul {
     justify-content: center;
     align-items: center;
 }
-nav ul li a {
+.links {
     display: block;
     color: #fff;
     text-decoration: none;
@@ -103,9 +101,45 @@ nav ul li a {
     padding: 20px;
     margin: 0 5px;
 }
-nav ul li a:hover {
+.links:hover {
     border-bottom: 5px solid green;
 }
+.links_active {
+    color: gold;
+}
+
+.index {
+    width: 100%;
+    height: calc(100vh - 100px);
+    background-color: #996666;
+    color: #fff;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding-bottom: 50px;
+    box-sizing: border-box;
+}
+.index__name {
+    text-align: center;
+}
+.index__name h1 {
+    font-size: 65px;
+    font-weight: bold;
+    text-transform: uppercase;
+    border-top: 3px solid rgba(255, 255, 255, 0.8);
+    border-bottom: 3px solid rgba(255, 255, 255, 0.8);
+    padding-top: 10px;
+    padding-bottom: 10px;
+    text-shadow: 0px -1px 0px #000,
+                 0px 1px 0px #fff,
+                 0px 0px 10px rgba(255, 255, 255, 0.8);
+}
+.index__name p {
+    margin-top: 10px;
+    font-size: 20px;
+}
+
+
 
 .company {
     font-family: sans-serif;
@@ -203,7 +237,7 @@ nav ul li a:hover {
 .support__btn {
     display: block;
     text-decoration: none;
-    background-color: #FF2B4A;
+    background-color: #cc334d;
     color: #fff;
     padding: 15px;
     margin: 30px 0 15px;
@@ -213,6 +247,6 @@ nav ul li a:hover {
     font-weight: bold;
 }
 .support__btn:hover {
-    background-color: #E02641;
+    background-color: #a3293d;
     cursor: pointer;
 }
