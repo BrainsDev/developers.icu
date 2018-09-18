@@ -1,0 +1,42 @@
+/* --------------- адаптивность сайта ---------*/
+@media screen and (max-width: 660px) { 
+    nav ul {
+        height: 80px;
+    }
+    .links {
+        padding: 29px 10px;
+        font-size: 14px;
+    }
+    .index {
+        height: calc(100vh - 80px);
+    }
+    .index__name h1 {
+        font-size: 56px;
+    }
+    .company > h2 {
+        padding: 40px 0;
+    }
+    .company > h3 {
+        margin-bottom: 2em;
+    }
+}
+@media screen and (max-width: 600px) {
+    nav ul {
+        height: 70px;
+    }
+    .links {
+        padding: 25px 10px;
+        font-size: 12px;
+    }
+    .index__name h1 {
+        font-size: 50px;
+    }
+    .index {
+        height: calc(100vh - 70px);
+    }
+}
+@media screen and (max-width: 1000px) {  }
+@media screen and (max-width: 768px) {  }
+@media screen and (max-width: 425px) {  }
+@media screen and (max-width: 375px) {  }
+@media screen and (max-width: 320px) {  }
