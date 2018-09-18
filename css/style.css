@@ -240,7 +240,7 @@ nav ul {
 .support__input {
     width: 100%;
     background: rgba(0, 0, 0, 0);
-    color: #000;
+    color: #fff;
     border: 1px solid rgba(255, 255, 255, 0.8);
     box-sizing: border-box;
     padding: 5px 10px;
@@ -251,7 +251,7 @@ nav ul {
     width: 100%;
     height: 200px;
     background: rgba(0, 0, 0, 0);
-    color: #000;
+    color: #fff;
     border: 1px solid rgba(255, 255, 255, 0.8);
     padding: 5px 10px;
     border-radius: 5px;
