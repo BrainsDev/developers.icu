@@ -220,23 +220,10 @@ nav ul {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
 .support {
     width: 500px;
     margin: 50px auto;
-    background: linear-gradient(45deg, rgba(150, 100, 100, 0.6), rgba(160, 50, 100, 0.6));
+    background: linear-gradient(45deg, rgba(100, 50, 50, 0.8), rgba(150, 100, 100, 0.8));
     border-radius: 5px;
 }
 .support h2 {
@@ -244,6 +231,8 @@ nav ul {
     padding: 20px;
     font-size: 30px;
     font-family: sans-serif;
+    color: #fff;
+    text-transform: uppercase;
 }
 .support__block {
     padding: 20px;
@@ -251,7 +240,7 @@ nav ul {
 .support__input {
     width: 100%;
     background: rgba(0, 0, 0, 0);
-    color: #fff;
+    color: #000;
     border: 1px solid rgba(255, 255, 255, 0.8);
     box-sizing: border-box;
     padding: 5px 10px;
@@ -262,7 +251,7 @@ nav ul {
     width: 100%;
     height: 200px;
     background: rgba(0, 0, 0, 0);
-    color: #fff;
+    color: #000;
     border: 1px solid rgba(255, 255, 255, 0.8);
     padding: 5px 10px;
     border-radius: 5px;
