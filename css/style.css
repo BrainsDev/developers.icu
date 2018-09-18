@@ -86,8 +86,10 @@ header {
     background-color: rgba(107, 46, 46, 0.8);
     position: relative;
 }
-nav ul {
+nav {
     height: 100px;
+}
+nav ul {
     display: flex;
     justify-content: center;
     align-items: center;
@@ -208,7 +210,7 @@ nav ul {
 .company__dev h3 {
     background-color: #008000;
     font-size: 1em;
-    width: 200px;
+    max-width: 200px;
     margin: 0 auto;
     padding: 10px;
     color: #fff;
@@ -220,23 +222,10 @@ nav ul {
 
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
 .support {
-    width: 500px;
+    max-width: 500px;
     margin: 50px auto;
-    background: linear-gradient(45deg, rgba(150, 100, 100, 0.6), rgba(160, 50, 100, 0.6));
+    background: linear-gradient(45deg, rgba(100, 50, 50, 0.8), rgba(150, 100, 100, 0.8));
     border-radius: 5px;
 }
 .support h2 {
@@ -244,6 +233,8 @@ nav ul {
     padding: 20px;
     font-size: 30px;
     font-family: sans-serif;
+    color: #fff;
+    text-transform: uppercase;
 }
 .support__block {
     padding: 20px;
