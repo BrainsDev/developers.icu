@@ -93,6 +93,7 @@ nav ul {
     display: flex;
     justify-content: center;
     align-items: center;
+    flex-wrap: wrap;
 }
 .links {
     display: block;
@@ -218,6 +219,7 @@ nav ul {
 }
 .company__dev p {
     padding: 15px;
+    text-align: justify;
 }
 
 
