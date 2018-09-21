@@ -49,12 +49,16 @@ nav ul {
 /* --------------- базовые настройки ---------*/
 html {
 	min-height:100%; /* всегда показываем вертикальную полосу прокрутки  */
+    display: flex;
 }
 body {
 	color: #000;
 	text-align: left;
 	font-size: 1em; /* используем безопасные шрифтовые CSS стеки */
-	min-height:100%;
+	min-height: 100%;
+    display: flex;
+    flex-direction: column;
+    width: 100%;
 }
 
 h1, h2, h3, h4, h5, h6{
@@ -81,13 +85,19 @@ img{
     height: 100vh;
     width: 100%;
     font-family: sans-serif;
+    display: flex;
+    flex-direction: column;
+    flex: 1;
 }
 header {
-    background-color: rgba(107, 46, 46, 0.8);
-    position: relative;
-}
-nav {
+    background-color: #222;
     height: 100px;
+}
+.content {
+    display: flex;
+    flex-grow: 1;
+    justify-content: center;
+    flex-wrap: wrap;
 }
 nav ul {
     display: flex;
@@ -100,12 +110,23 @@ nav ul {
     color: #fff;
     text-decoration: none;
     font-weight: bold;
-    border-bottom: 5px solid transparent;
-    padding: 38px 20px;
+    padding: 40px 20px;
     margin: 0 5px;
+    position: relative;
 }
-.links:hover {
-    border-bottom: 5px solid green;
+.links::before {
+    content: '';
+    position: absolute;
+    height: 5px;
+    background-color: green;
+    transition: 0.5s;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    transform: scaleX(0);
+}
+.links:hover:before {
+    transform: scaleX(1);
 }
 .links_active {
     color: gold;
@@ -113,7 +134,7 @@ nav ul {
 
 .index {
     width: 100%;
-    height: calc(100vh - 100px);
+    height: calc(100vh - 200px);
     background-color: #996666;
     color: #fff;
     display: flex;
@@ -150,21 +171,24 @@ nav ul {
 .portfolio h2 {
     font-family: fantasy;
     text-align: center;
-    font-size: 5em;
+    font-size: 60px;
+    margin: 50px 0;
 }
 
 .portfolio h3 {
-    font-size: 3em;
+    font-size: 34px;
     text-align: center;
 }
 
 .portfolio__content {
     display: flex;
     justify-content: space-between;
+    flex-wrap: wrap;
 }
 .portfolio__block {
     padding: 5%;
-    margin-top: 10em;
+    margin-top: 5em;
+    width: 20%;
 }
 .portfolio img {
     display: block;
@@ -172,8 +196,8 @@ nav ul {
 }
 .portfolio__block h2 {
     font-size: 2em;
+    margin: 0;
 }
-
 .portfolio__block p {
     text-align: center;
 }
@@ -181,12 +205,12 @@ nav ul {
 
 
 .company h2 {
-    font-size: 40px;
+    font-size: 60px;
     text-align: center;
     padding: 80px 0;
 }
 .company h3 {
-    font-size: 24px;
+    font-size: 34px;
     text-align: center;
     margin-bottom: 3em;
 }
@@ -267,7 +291,7 @@ nav ul {
 .support__btn {
     display: block;
     text-decoration: none;
-    background-color: #cc334d;
+    background-color: rgb(200, 60, 50);
     color: #fff;
     padding: 15px;
     margin: 30px 0 15px;
@@ -276,8 +300,139 @@ nav ul {
     font-size: 15px;
     font-weight: bold;
     border: none;
+    box-shadow: 2px 2px 5px 0 rgba(0, 0, 0, 0.6);
+    transition: 0.5s;
 }
 .support__btn:hover {
-    background-color: #a3293d;
+    background-color: rgb(200, 40, 50);
     cursor: pointer;
+}
+.support__btn:active {
+    position: relative;
+    top: 2px;
+    box-shadow: 2px 0 5px 0 rgba(0, 0, 0, 0.6);
+}
+
+footer {
+    background-color: #222;
+    height: 100px;
+    line-height: 100px;
+    width: 100%;
+}
+footer p {
+    text-align: center;
+    color: #fff;
+}
+
+
+/* --------------- адаптивность сайта ---------*/
+@media screen and (max-width: 660px) { 
+    header {
+        height: 80px;
+    }
+    .links {
+        padding: 31px 10px;
+        font-size: 14px;
+    }
+    .index {
+        height: calc(100vh - 160px);
+    }
+    .index__name h1 {
+        font-size: 56px;
+    }
+    .company > h2 {
+        padding: 40px 0;
+    }
+    .company > h3 {
+        margin-bottom: 2em;
+    }
+    .company__dev img {
+        width: 80px;
+    }
+    footer {
+        height: 80px;
+        line-height: 80px;
+    }
+}
+@media screen and (max-width: 600px) {
+    header {
+        height: 70px;
+    }
+    .links {
+        padding: 27px 8px;
+        font-size: 12px;
+    }
+    .index {
+        height: calc(100vh - 140px);
+    }
+    .index__name h1 {
+        font-size: 42px;
+    }
+    .portfolio > h2 {
+        font-size: 40px;
+        margin: 30px 0;
+    }
+    .portfolio > h3 {
+        font-size: 30px;
+    }
+    footer {
+        height: 70px;
+        line-height: 70px;
+    }
+}
+@media screen and (max-width: 500px) {
+    .links {
+        padding: 27px 6px;
+    }
+    .company > h2 {
+        font-size: 30px;
+        padding: 20px 0;
+    }
+    .company > h3 {
+        font-size: 18px;
+        margin-bottom: 1em;
+    }
+    .company__content {
+        flex-direction: column;
+    }
+    .company__dev {
+        width: 80%;
+        margin: 20px auto;
+    }
+    .company__dev img {
+        width: 100px;
+    }
+    .portfolio > h2 {
+        font-size: 30px;
+        margin: 30px 0;
+    }
+    .portfolio > h3 {
+        font-size: 20px;
+    }
+}
+@media screen and (max-width: 425px) {
+    header {
+        height: 100px;
+    }
+    .links {
+        padding: 17px 10px;
+    }
+    .index {
+        height: calc(100vh - 170px);
+    }
+    .index__name h1 {
+        font-size: 2em;
+    }
+    .portfolio__block h2 {
+        font-size: 1.5em;
+    }
+}
+@media screen and (max-width: 375px) {}
+@media screen and (max-width: 320px) {
+    .portfolio__block h2 {
+        font-size: 1em;
+    }
+    .portfolio__block p {
+        font-size: 0.75em;
+    }
 }
