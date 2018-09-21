@@ -204,6 +204,9 @@ nav ul {
 
 
 
+.company {
+    
+}
 .company h2 {
     font-size: 60px;
     text-align: center;
@@ -222,6 +225,7 @@ nav ul {
     width: 48%;
     border: 4px solid #9b9b9b;
     border-radius: 20px;
+    margin: 20px auto;
 }
 .company__dev img {
     padding-top: 3%;
@@ -397,7 +401,6 @@ footer p {
     }
     .company__dev {
         width: 80%;
-        margin: 20px auto;
     }
     .company__dev img {
         width: 100px;
