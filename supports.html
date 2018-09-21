@@ -4,7 +4,6 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/style.css">
-    <link rel="stylesheet" href="css/style-adaptive.css">
     <title>Developers.icu</title>
 </head>
 <body>
@@ -22,19 +21,25 @@
             </nav>
         </header>
         
-        <section class="support">
-            <h2>Тех.поддержка</h2>
-            <div class="support__block">
-                <form method="post">
-                    <input class="support__input" type="text" name="name" placeholder="Имя" required>
-                    <input class="support__input" type="email" name="email" placeholder="Электронная почта" required>
-                    <input class="support__input" type="text" name="subject" placeholder="Тема" required>
-                    <textarea class="support__textarea" name="message" placeholder="Сообщение" required></textarea>
-                    <button class="support__btn" type="submit">Отправить сообщение</button>
-                </form>
-            </div>
-        </section>
+        <div class="content">
+            <section class="support">
+                <h2>Тех.поддержка</h2>
+                <div class="support__block">
+                    <form method="post">
+                        <input class="support__input" type="text" name="name" placeholder="Имя" required>
+                        <input class="support__input" type="email" name="email" placeholder="Электронная почта" required>
+                        <input class="support__input" type="text" name="subject" placeholder="Тема" required>
+                        <textarea class="support__textarea" name="message" placeholder="Сообщение" required></textarea>
+                        <button class="support__btn" type="submit">Отправить</button>
+                    </form>
+                </div>
+            </section>
+        </div>
         
+        <footer>
+            <p>&copy; BrainDev</p>
+        </footer>
+    
     </div>
     
 </body>
